@@ -60,9 +60,9 @@ saver = tf.train.Saver()
 
 # session open
 sess = tf.Session()
-sess.run(tf.global_variables_initializer())
+# sess.run(tf.global_variables_initializer())
 
-
+saver.restore(sess, "./model/cnn.ckpt")
 
 
 print('Learning Start')
